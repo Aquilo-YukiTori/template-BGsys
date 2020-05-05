@@ -1,0 +1,118 @@
+.tmshead-container{
+  position: relative;
+  z-index: 100;
+  height: @headHeight;
+  min-width: @minWidth;
+  background-color: @blueColor;
+  .tmshead-tit{
+    display: inline-block;
+    vertical-align: middle;
+    width: 260px;
+    text-align: center;
+    line-height: @headHeight;
+    color: #fff;
+    font-size: 22px;
+  }
+  //一级菜单
+  .first-menu{
+    display: inline-block;
+    vertical-align: middle;
+    width: 60%;
+    min-width: 720px;
+    .firstmenu-item{
+      position: relative;
+      float: left;
+      width: 12.5%;
+      min-width: 90px;
+      height: @headHeight;
+      text-align: center;
+      font-size: 18px;
+      color: #fff;
+      cursor: pointer;
+      &.active, &:hover{
+        background-color: #266790;
+      }
+      .item-inner{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+      }
+      .iconfont{
+        font-size: 30px;
+      }
+      .menu-text{
+        margin-top: 10px;
+      }
+    }
+  }
+  //右侧通知、个人中心
+  .head-right{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    .notice, .message, .user{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 8px 0 0;
+      padding: 10px;
+      width: 50px;
+      text-align: center;
+      cursor: pointer;
+      .iconfont{
+        color: #fff;
+        font-size: 22px;
+      }
+    }
+    .notice{
+      .el-badge__content.is-fixed{
+        top: 0px;
+        right: 12px;
+      }
+    }
+    .user{
+      position: relative;
+      &:hover{
+        .drop-menu{
+          display: block;
+        }
+      }
+    }
+    .drop-menu{
+      display: none;
+      position: absolute;
+      left: -61px;
+      top: 46px;
+      z-index: 110;
+      width: 120px;
+      color: @baseFontColor;
+      font-size: 14px;
+      border: 1px solid @borderColor;
+      border-radius: 4px;
+      background-color: #fff;
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        right: 25px;
+        top: -16px;
+        border: 8px solid transparent;
+        border-bottom-color: #fff;
+      }
+      li{
+        line-height: 36px;
+        cursor: pointer;
+        &:not(:last-child){
+          border-bottom: 1px solid @borderColor;
+        }
+      }
+      .iconfont{
+        padding-right: 6px;
+        font-size: 16px;
+        color: @baseFontColor;
+      }
+    }
+  }
+}
