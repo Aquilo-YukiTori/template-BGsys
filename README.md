@@ -1,26 +1,9 @@
-# test
-
-## Project setup
+## 简介
 ```
-yarn install
+一个后台管理系统的模板
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## 存在的问题
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
+* 暂时只能用`npm run serve`来启动
+* 没与后端解耦
